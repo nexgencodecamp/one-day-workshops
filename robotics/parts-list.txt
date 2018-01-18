@@ -1,0 +1,20 @@
+Robot Parts List
+-------------------
+
+Arduino UNO & cable
+https://www.aliexpress.com/item/1pc-UNO-R3-MEGA328P-CH340G-for-Arduino-UNO-R3-USB-CABLE/32827571640.html?spm=a2g0s.9042311.0.0.mW5kXy
+
+L298N motor drivers
+https://www.aliexpress.com/item/2pcs-New-Dual-H-Bridge-DC-Stepper-Motor-Drive-Controller-Board-Module-L298N/32582919324.html?spm=a2g0s.9042311.0.0.17VwuI
+
+Chassis
+https://www.auselectronicsdirect.com.au/arduino-2-wheel-drive-motor-chassis-kit
+
+Jumper wires
+https://www.aliexpress.com/item/40pcs-in-Row-Dupont-Cable-20cm-2-54mm-1pin-1p-1p-Female-to-Male-jumper-wire/1790340897.html?spm=2114.search0104.3.16.40fccd174TxCe&ws_ab_test=searchweb0_0,searchweb201602_2_10152_10151_10065_10344_10130_10068_10342_10547_10343_10340_10548_10341_10084_10083_10615_10307_10131_10132_10133_10313_10059_10314_10534_100031_10604_10103_10142,searchweb201603_25,ppcSwitch_2&algo_expid=30cb3815-c0a4-4556-8a30-22d1cee402f2-2&algo_pvid=30cb3815-c0a4-4556-8a30-22d1cee402f2&transAbTest=ae803_4&priceBeautifyAB=5
+
+Ultrasonic sensors
+https://www.aliexpress.com/item/HC-sr04-Ultrasonic-sensors-measuring-the-distance-Modules-for-the-PICAXE-microcontroller-Arduino-UNO/32384559794.html?spm=a2g0s.9042311.0.0.UaFwE2
+
+Analogue Sound Sensor
+https://core-electronics.com.au/analog-sound-sensor.html
