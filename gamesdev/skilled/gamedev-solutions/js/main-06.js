@@ -48,12 +48,14 @@ function initialiseGame(){
 
   // Add an Enemy
   // Add a for...loop
+  /*** SOLUTION CODE ***/
   for(var i=0; i<3; i++){
     var enemy = Crafty.e("EnemySimple");
     enemy.afterInit({x: 100 + (i*40), y: 100, speed: 300});
   }
 
   // Write and call a spawnEnemies() function
+  /*** SOLUTION CODE FOR SPAWN ENEMY EVERY SECOND ***/
   //spawnEnemies(1000);
 }
 
@@ -72,8 +74,9 @@ function initialiseGame(){
 | |_| | |_| |  __/\__ \ |_| | (_) | | | \__ \
 \__\_\\__,_|\___||___/\__|_|\___/|_| |_|___/
 
-1. We are now going to add multiple enemies together in a for...loop
+1. Write a for...loop so that multiple enemies are created. Test your solution
 
-2. Writing a spawnEnemies function together
+2. Now remove the for...loop altogether. We are going to write a function called 'spawnEnemies()'
+  that spawns an enemy every second. We are going to do this together as a class.
 
  */

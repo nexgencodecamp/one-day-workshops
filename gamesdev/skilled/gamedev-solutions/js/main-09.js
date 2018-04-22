@@ -10,7 +10,7 @@ db      d88888b .d8888. .d8888.  .d88b.  d8b   db           .d888b.
 Y88888P Y88888P `8888Y' `8888Y'  `Y88P'  VP   V8P            d8'
 
 **************************************************
-******* ADDING EXPLOSIONS, SCORE & SOUNDS ********
+******* ADDING SCORE ********
 **************************************************
 
  */
@@ -50,7 +50,7 @@ Crafty.bind('EnterFrame', function() {
 });
 Crafty.bind('player_fired', function(player) {
   player.fire();
-  //Crafty.audio.play("ship-shoot");
+  Crafty.audio.play("ship-shoot");
 });
 
 initialiseGame();
@@ -81,3 +81,15 @@ function spawnEnemies(interval) {
     enemy.afterInit({x: Crafty.math.randomNumber(40, 460) , y: -34, speed: 50 + __score/50});
   }, interval, -1)
 }
+
+/*
+ ___                  _   _
+/ _ \ _   _  ___  ___| |_(_) ___  _ __  ___
+| | | | | | |/ _ \/ __| __| |/ _ \| '_ \/ __|
+| |_| | |_| |  __/\__ \ |_| | (_) | | | \__ \
+\__\_\\__,_|\___||___/\__|_|\___/|_| |_|___/
+
+1. In order to update the score you must add some code to EnemySimple.js in the onHit event.
+  You must update the __score variable by adding some number to it.
+
+ */

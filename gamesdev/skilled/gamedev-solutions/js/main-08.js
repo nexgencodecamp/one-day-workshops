@@ -9,7 +9,7 @@ _|        _|            _|_|      _|_|  _|    _|  _|    _|          _|    _|
 _|_|_|_|    _|_|_|  _|_|_|    _|_|_|      _|_|    _|    _|            _|_|
 
 **************************************************
-******* ADDING EXPLOSIONS, SCORE & SOUNDS ********
+******* ADDING SOUNDS ********
 **************************************************
 
  */
@@ -37,16 +37,15 @@ Crafty.sprite(60, 64, "../img/player-explosion-T60x64.png", {
 });
 
 /**** SOUNDS ****/
+/*** SOLUTION CODE ***/
 Crafty.audio.add("ship-shoot", "../snd/laser_default.wav");
 Crafty.audio.add("enemy-explode", "./snd/explosion.wav");
 
 /**** EVENTS ****/
-Crafty.bind('EnterFrame', function() {
-  displayPlayerScore()
-});
 Crafty.bind('player_fired', function(player) {
   player.fire();
-  //Crafty.audio.play("ship-shoot");
+  /*** SOLUTION CODE ***/
+  Crafty.audio.play("ship-shoot");
 });
 
 initialiseGame();
@@ -86,12 +85,6 @@ function spawnEnemies(interval) {
 | |_| | |_| |  __/\__ \ |_| | (_) | | | \__ \
 \__\_\\__,_|\___||___/\__|_|\___/|_| |_|___/
 
-1. The event 'player_fired' is written for you above. Your task is to add 1 line of code inside the event.
-   The line of code calls the 'fire' function on the Player ie. your ship.
-   Write the line of code in!
-
-2. How can we make our player and bullets faster ?
-
-3. Comment out the lines in the onHit event in EnemySimple.js. Run your code again. What happens?
+1. Add a sound effect when the player shoots
 
  */

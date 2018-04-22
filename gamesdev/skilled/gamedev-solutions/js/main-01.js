@@ -31,6 +31,7 @@ function initialiseGame(){
   Crafty.background('#000000');
 }
 
+/*** SOLUTION CODE ***/
 initialiseGame();
 
 /*
@@ -46,6 +47,12 @@ initialiseGame();
 
   3. Run the code:
     - Make sure your python webserver is started
+
+    To start a python webserver, open up a command line and navigate to your project directory.
+    Now type the following:
+
+    python -m SimpleHTTPServer 8000
+
     - In Chrome open a new tab. Goto http://localhost:8000, your page should appear!
 
   4. You are currently missing the game!! In order to see it you must call a function.
@@ -54,7 +61,7 @@ initialiseGame();
 
   5. Change the background color
 
-  6. Finally, what is 'Crafty' above?
+  6. Finally, what is 'Crafty' in the code above?
 
 
 

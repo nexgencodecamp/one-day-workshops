@@ -18,6 +18,7 @@
 
 /**** GLOBAL VARIABLES ****/
 var __gameState;
+var __starField;
 
 initialiseGame();
 
@@ -32,6 +33,7 @@ function initialiseGame(){
   __starField = new Starfield(game);
 
   // Start the __starField
+  /*** SOLUTION CODE ***/
   __starField.start();
 }
 
@@ -42,7 +44,7 @@ function initialiseGame(){
 | |_| | |_| |  __/\__ \ |_| | (_) | | | \__ \
 \__\_\\__,_|\___||___/\__|_|\___/|_| |_|___/
 
-1. '__starField' is a new Starfield object. But how do we 'start' the Starfield so that we see stars ?
+1. '__starField' is a variable representing a Starfield object. But how do we 'start' the Starfield so that we see stars ?
   HINT: Find the file Starfield.js in the components directory. Have a look inside it for a function that
   might start the starfield.
 

@@ -15,6 +15,8 @@ Crafty.c("EnemySimple", {
     this.y = props.y;
     this.reel('EnemySimpleMove', 1000, [[0, 0],[1, 0]]);
     this.animate('EnemySimpleMove', -1);
+
+    /*** SOLUTION CODE ***/
     this.gravity();
     this.gravityConst(props.speed);
   },
@@ -28,7 +30,7 @@ Crafty.c("EnemySimple", {
     }).onHit('Bullet', function(o) {
       let bullet = o[0].obj;
       bullet.trigger("explode_bullet");
-      Crafty.e('Explosion').play({x: self.x-20, y: self.y - 20});
+      //Crafty.e('Explosion').play({x: self.x-20, y: self.y - 20});
       //Crafty.audio.play("enemy-explode");
       self.destroy();
 

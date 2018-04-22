@@ -33,6 +33,7 @@ Crafty.sprite(60, 60, "../img/enemy-explosion-T60x60.png", {
 
 /**** EVENTS ****/
 Crafty.bind('player_fired', function(player) {
+  /*** SOLUTION CODE ***/
   player.fire();
 });
 
@@ -79,6 +80,5 @@ function spawnEnemies(interval) {
 
 2. How can we make our player and bullets faster ?
 
-3. Comment out the lines in the onHit event in EnemySimple.js. Run your code again. What happens?
 
  */
