@@ -24,9 +24,7 @@ Crafty.sprite("../img/ship.png", {
   ship: [0, 0, 32, 34]
 });
 /*** SOLUTION CODE ***/
-Crafty.sprite("../img/enemy-1-sprite-T20x26.png", {
-  bee: [0, 0, 26, 20]
-});
+
 
 initialiseGame();
 

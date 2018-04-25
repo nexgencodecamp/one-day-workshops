@@ -21,9 +21,7 @@ var __player;
 
 /**** SPRITES ****/
 /*** SOLUTION CODE ***/
-Crafty.sprite("../img/ship.png", {
-  ship: [0, 0, 32, 34]
-});
+
 
 initialiseGame();
 

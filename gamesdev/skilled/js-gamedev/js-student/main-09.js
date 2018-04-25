@@ -2,20 +2,23 @@
 /******************************************************************
 /******************************************************************
 
-.-.   .----. .----. .----. .---. .-. .-.        .---.
-} |   } |__}{ {__-`{ {__-`/ {-. \|  \{ |        `-`} }
-} '--.} '__}.-._} }.-._} }\ '-} /| }\  {          / /
-`----'`----'`----' `----'  `---' `-' `-'         `-'
+db      d88888b .d8888. .d8888.  .d88b.  d8b   db           .d888b.
+88      88'     88'  YP 88'  YP .8P  Y8. 888o  88           88' `8D
+88      88ooooo `8bo.   `8bo.   88    88 88V8o 88           `V8o88'
+88      88~~~~~   `Y8b.   `Y8b. 88    88 88 V8o88              d8'
+88booo. 88.     db   8D db   8D `8b  d8' 88  V888             d8'
+Y88888P Y88888P `8888Y' `8888Y'  `Y88P'  VP   V8P            d8'
 
-********************************************
-******* ADDING BULLETS & COLLISIONS ********
-********************************************
+**************************************************
+******* ADDING SCORE ********
+**************************************************
 
  */
 
 /**** GLOBAL VARIABLES ****/
 var __gameState;
 var __player;
+var __score = 0;
 
 /**** SPRITES ****/
 Crafty.sprite("../img/ship.png", {
@@ -30,18 +33,31 @@ Crafty.sprite(6, 16, "../img/ship-bullet-T6x16.png", {
 Crafty.sprite(60, 60, "../img/enemy-explosion-T60x60.png", {
   enemy_explosion: [0, 0]
 });
+Crafty.sprite(60, 64, "../img/player-explosion-T60x64.png", {
+  player_explosion: [0, 0]
+});
+
+/**** SOUNDS ****/
+Crafty.audio.add("ship-shoot", "../snd/laser_default.wav");
+Crafty.audio.add("enemy-explode", "./snd/explosion.wav");
 
 /**** EVENTS ****/
+Crafty.bind('player_killed', function() {
+  displayGameOver();
+});
+Crafty.bind('EnterFrame', function() {
+  displayPlayerScore()
+});
 Crafty.bind('player_fired', function(player) {
-  /*** SOLUTION CODE ***/
-
+  player.fire();
+  Crafty.audio.play("ship-shoot");
 });
 
 initialiseGame();
 
 function initialiseGame(){
   // Draw screen after all assets load
-  Crafty.init(508, 768, document.getElementById('game'));
+  Crafty.init(GAME_WIDTH, GAME_HEIGHT, document.getElementById('game'));
 
   // Add black Background with no image
   Crafty.background('#000000');
@@ -62,10 +78,9 @@ function initialiseGame(){
 function spawnEnemies(interval) {
   Crafty.e("Delay").delay(function(){
     var enemy = Crafty.e("EnemySimple");
-    enemy.afterInit({x: Crafty.math.randomNumber(40, 460) , y: -34, speed: 100});
+    enemy.afterInit({x: Crafty.math.randomNumber(40, 460) , y: -34, speed: 50 + __score/50});
   }, interval, -1)
 }
-
 
 /*
  ___                  _   _
@@ -74,11 +89,7 @@ function spawnEnemies(interval) {
 | |_| | |_| |  __/\__ \ |_| | (_) | | | \__ \
 \__\_\\__,_|\___||___/\__|_|\___/|_| |_|___/
 
-1. The event 'player_fired' is written for you above. Your task is to add 1 line of code inside the event.
-   The line of code calls the 'fire' function on the Player ie. your ship.
-   Write the line of code in!
-
-2. How can we make our player and bullets faster ?
-
+1. In order to update the score you must add some code to EnemySimple.js in the onHit event.
+  You must update the __score variable by adding some number to it.
 
  */

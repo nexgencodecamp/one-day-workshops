@@ -19,12 +19,12 @@ Crafty.c("Player", {
       // do something !
     }).bind('EnemyHit', function(data){
       Crafty.log('EnemyHit:',data)
-      this.score += data.points;
+      //this.score += data.points;
 
       // Check if we need to update the hi-score
-      if(this.score > __hiScore){
-          __hiScore = this.score;
-      }
+      // if(this.score > __hiScore){
+      //     __hiScore = this.score;
+      // }
 
       // Tell the Game that an enemy has been enemy_destroyed
       Crafty.trigger('enemy_destroyed');

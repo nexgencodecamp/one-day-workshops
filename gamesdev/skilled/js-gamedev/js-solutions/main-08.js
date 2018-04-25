@@ -38,14 +38,13 @@ Crafty.sprite(60, 64, "../img/player-explosion-T60x64.png", {
 
 /**** LOAD SOUNDS ****/
 /*** SOLUTION CODE ***/
-Crafty.audio.add("ship-shoot", "../snd/laser_default.wav");
-Crafty.audio.add("enemy-explode", "./snd/explosion.wav");
+
 
 /**** EVENTS ****/
 Crafty.bind('player_fired', function(player) {
   player.fire();
   /*** SOLUTION CODE - PLAY SOUNDS ***/
-  Crafty.audio.play("ship-shoot");
+
 });
 
 initialiseGame();

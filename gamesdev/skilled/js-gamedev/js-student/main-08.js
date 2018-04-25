@@ -2,15 +2,14 @@
 /******************************************************************
 /******************************************************************
 
-db      d88888b .d8888. .d8888.  .d88b.  d8b   db           .d888b.
-88      88'     88'  YP 88'  YP .8P  Y8. 888o  88           88' `8D
-88      88ooooo `8bo.   `8bo.   88    88 88V8o 88           `V8o88'
-88      88~~~~~   `Y8b.   `Y8b. 88    88 88 V8o88              d8'
-88booo. 88.     db   8D db   8D `8b  d8' 88  V888             d8'
-Y88888P Y88888P `8888Y' `8888Y'  `Y88P'  VP   V8P            d8'
+_|                                                                    _|_|
+_|          _|_|      _|_|_|    _|_|_|    _|_|    _|_|_|            _|    _|
+_|        _|_|_|_|  _|_|      _|_|      _|    _|  _|    _|            _|_|
+_|        _|            _|_|      _|_|  _|    _|  _|    _|          _|    _|
+_|_|_|_|    _|_|_|  _|_|_|    _|_|_|      _|_|    _|    _|            _|_|
 
 **************************************************
-******* ADDING SCORE ********
+******* ADDING SOUNDS ********
 **************************************************
 
  */
@@ -37,19 +36,15 @@ Crafty.sprite(60, 64, "../img/player-explosion-T60x64.png", {
   player_explosion: [0, 0]
 });
 
-/**** SOUNDS ****/
+/**** LOAD SOUNDS ****/
+/*** SOLUTION CODE ***/
 Crafty.audio.add("ship-shoot", "../snd/laser_default.wav");
 Crafty.audio.add("enemy-explode", "./snd/explosion.wav");
 
 /**** EVENTS ****/
-Crafty.bind('player_killed', function() {
-  displayGameOver();
-});
-Crafty.bind('EnterFrame', function() {
-  displayPlayerScore()
-});
 Crafty.bind('player_fired', function(player) {
   player.fire();
+  /*** SOLUTION CODE - PLAY SOUNDS ***/
   Crafty.audio.play("ship-shoot");
 });
 
@@ -78,9 +73,10 @@ function initialiseGame(){
 function spawnEnemies(interval) {
   Crafty.e("Delay").delay(function(){
     var enemy = Crafty.e("EnemySimple");
-    enemy.afterInit({x: Crafty.math.randomNumber(40, 460) , y: -34, speed: 50 + __score/50});
+    enemy.afterInit({x: Crafty.math.randomNumber(40, 460) , y: -34, speed: 50 + __score/10});
   }, interval, -1)
 }
+
 
 /*
  ___                  _   _
@@ -89,9 +85,6 @@ function spawnEnemies(interval) {
 | |_| | |_| |  __/\__ \ |_| | (_) | | | \__ \
 \__\_\\__,_|\___||___/\__|_|\___/|_| |_|___/
 
-1. In order to update the score you must add some code to EnemySimple.js in the onHit event.
-  You must update the __score variable by adding some number to it.
-
-  The Player conponent is where the score should be updated.
+1. Add a sound effect when the player shoots
 
  */
