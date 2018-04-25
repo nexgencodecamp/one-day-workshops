@@ -48,7 +48,7 @@ function initialiseGame(){
 
   // Add an Enemy
   // Add a for...loop
-  /*** SOLUTION CODE ***/
+  /*** SOLUTION CODE - FOR...LOOP ***/
   for(var i=0; i<3; i++){
     var enemy = Crafty.e("EnemySimple");
     enemy.afterInit({x: 100 + (i*40), y: 100, speed: 300});
