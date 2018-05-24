@@ -32,7 +32,7 @@ function initialiseGame(){
 }
 
 /*** SOLUTION CODE ***/
-
+initialiseGame();
 
 /*
  ___                  _   _

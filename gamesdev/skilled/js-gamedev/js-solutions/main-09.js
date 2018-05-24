@@ -92,4 +92,6 @@ function spawnEnemies(interval) {
 1. In order to update the score you must add some code to EnemySimple.js in the onHit event.
   You must update the __score variable by adding some number to it.
 
+  The Player conponent is where the score should be updated.
+
  */

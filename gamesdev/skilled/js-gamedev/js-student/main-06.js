@@ -49,23 +49,14 @@ function initialiseGame(){
   // Add an Enemy
   // Add a for...loop
   /*** SOLUTION CODE - FOR...LOOP ***/
-  for(var i=0; i<3; i++){
-    var enemy = Crafty.e("EnemySimple");
-    enemy.afterInit({x: 100 + (i*40), y: 100, speed: 300});
-  }
+
 
   // Write and call a spawnEnemies() function
   /*** SOLUTION CODE FOR SPAWN ENEMY EVERY SECOND ***/
-  //spawnEnemies(1000);
+
 }
 
-// Write a spawnEnemies() function
-// function spawnEnemies(interval) {
-//   Crafty.e("Delay").delay(function(){
-//     var enemy = Crafty.e("EnemySimple");
-//     enemy.afterInit({x: Crafty.math.randomNumber(40, 460) , y: -34, speed: 300});
-//   }, interval, -1)
-// }
+
 
 /*
  ___                  _   _

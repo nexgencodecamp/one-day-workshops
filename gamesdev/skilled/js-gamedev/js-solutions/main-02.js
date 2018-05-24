@@ -34,7 +34,7 @@ function initialiseGame(){
 
   // Start the __starField
   /*** SOLUTION CODE ***/
-
+  __starField.start();
 }
 
 /*
