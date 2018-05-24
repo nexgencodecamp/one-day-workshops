@@ -18,8 +18,8 @@ var __gameState;
 var __player;
 
 /**** SPRITES ****/
-Crafty.sprite("../img/ship.png", {
-  ship: [0, 0, 32, 34]
+Crafty.sprite(32, 34, "../img/ship.png", {
+  ship: [0, 0]
 });
 Crafty.sprite(26, 20, "../img/enemy-1-sprite-T20x26.png", {
   bee: [0, 0]
