@@ -1,5 +1,5 @@
 // Create Enemy Component
-Crafty.c("EnemySimple", {
+Crafty.c("Enemy", {
   required: "2D, Canvas, SpriteAnimation, Collision, Gravity, bee",
   /* This function will be called when the component is added to an entity */
   init: function() {
