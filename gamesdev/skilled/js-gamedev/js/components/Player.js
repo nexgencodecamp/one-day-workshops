@@ -28,14 +28,8 @@ Crafty.c("Player", {
 
       // Tell the Game that an enemy has been enemy_destroyed
       Crafty.trigger('enemy_destroyed');
-    }).onHit('EnemySimple', function(o) {
-      /*for (var i = 0; i < o.length; i++) {
-        o[i].obj.trigger("explode_bullet");
-      }
-      // Explosion
-      Crafty.e('Explosion').playPlayerExplosion({x: this.x-10, y: this.y-10});
-      this.destroy();
-      Crafty.trigger('player_killed');*/
+    }).onHit('Enemy', function(o) {
+        /* Explosion */
     });
   },
 
